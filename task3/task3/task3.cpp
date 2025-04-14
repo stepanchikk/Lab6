@@ -7,8 +7,9 @@ public:
     Figure() = default;
     virtual ~Figure() { std::cout << "Знищення фігури\n"; }
 
-    virtual void print(std::ostream& os) const = 0;
-    virtual void read(std::istream& is) = 0;
+    virtual void print(std::ostream& os) const = 0; // чисто віртуальна функція для виводу
+    virtual void read(std::istream& is) = 0; // чисто віртуальна функція для вводу
+};
 };
 
 std::ostream& operator<<(std::ostream& os, const Figure& f) {
